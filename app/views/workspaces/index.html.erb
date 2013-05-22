@@ -1,0 +1,39 @@
+<h1>List of Added Files</h1>
+
+<table>
+<% @workspaces.each do |workspace| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+    <td class="list_description">
+      <dl>
+        <dt><%= workspace.title %></dt>
+        <dd><%= truncate(strip_tags(workspace.description),
+               :length => 80) %></dd>
+      </dl>
+    </td>
+
+    <td class="list_actions">
+      <%= link_to 'Delete', workspace, 
+                  :confirm => 'Are you sure?',
+                  :method => :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Add new file', new_workspace_path %>
+<br />
+<br />
+<br />
+
+Last 10 commits:
+<br />
+
+<% @logs.each do |log| %>
+<%= log.author %>
+<%= log.authored_date %>
+<%= log.message %>
+<%= link_to 'Diff', diff_path(log) %> 
+
+<br />
+<% end %>

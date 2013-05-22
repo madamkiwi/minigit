@@ -1,0 +1,10 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1><%= t('.title_html') %></h1>
+
+<ul>
+  <%= link_to 'Add Files', workspaces_path %> | 
+  <%= link_to 'Users', users_path %>
+</ul>

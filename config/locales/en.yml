@@ -1,0 +1,37 @@
+en:
+
+#START:errors
+  errors:
+    template:
+      body:        "There were problems with the following fields:"
+      header:       
+        one:       "1 error prohibited this %{model} from being saved"
+        other:     "%{count} errors prohibited this %{model} from being saved"
+#END:errors
+
+#START:layout
+  layouts:
+    application:
+      title:       "Git for Non-Programmers"
+      home:        "Home"
+      questions:   "Questions"
+      news:        "News"
+      contact:     "Contact"
+#END:layout
+
+#START:admin
+  admin:
+    index:
+      title_html:  "Welcome, admin"
+#END:main
+
+#START:main
+  store:
+    index:
+      title_html:  "Welcome"
+      add_html:    "Add File to Stage"
+#END:main
+
+#START:flash
+  thanks:          "Changes Committed!"
+#END:flash
